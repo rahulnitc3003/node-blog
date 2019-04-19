@@ -25,8 +25,12 @@
 const express = require('express');
 const path = require('path');
 const expressEdge = require('express-edge');
+const mongoose = require('mongoose');
 
 const app = express();
+
+mongoose.connect('mongodb://127.0.0.1:27017/node-js-blog');
+
 const port = 9000;
 
 app.use(express.static('public'));
